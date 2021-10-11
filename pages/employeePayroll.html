@@ -27,9 +27,56 @@
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name:"required>
                 <error-output class="text-error" for="text"></error-output>
-            </div>      
-         </div>
-
-        
+            </div>
+            <!-- USE CASE 3 -->
+<div class="row content">
+    <div class="profile-radio-content">
+        <label class="label text" for="profile">Profile image</label>
+        <label>
+            <input type="radio" id="profile1"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <img class="profile" id="image1" src="../assets/profile1.webp">
+        </label>
+        <label>
+            <input type="radio" id="profile2"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <img class="profile" id="image2" src="../assets/profile2.webp">
+        </label>
+        <label>
+            <input type="radio" id="profile3"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <img class="profile" id="image3" src="../assets/profile3.webp">
+        </label>
+        <label>
+            <input type="radio" id="profile4"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <img class="profile" id="image4" src="../assets/profile4.webp">
+        </label>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="gender">Gender</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label class="text" for="male">Male</label>
+            <input type="radio" id="female" name="gender"value="female">
+            <label class="text"for="female">Female</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="department">Daprtment</label>
+        <div>
+            <input class="checkbox"type="checkbox"id="hr"name="hr"value="HR">
+            <label class="text" for="hr">HR</label>
+            <input class="checkbox"type="checkbox"id="sales"name="hr"value="Sales">
+            <label class="text" for="sales">Sales</label>
+            <input class="checkbox"type="checkbox"id="finance"name="finance"value="Finance">
+            <label class="text" for="finance">Finance</label>
+            <input class="checkbox"type="checkbox"id="engineer"name="engineer"value="Engineer">
+            <label class="text" for="engineer">Engineer</label>
+            <input class="checkbox"type="checkbox"id="others"name="others"value="Others">
+            <label class="text" for="others">others</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="salary">Choose your salary</label>
+        <input type="range" name="salary" id="salary" min="300000" max="500000"step="100" value="350000">
+        <output class="salary-output" for="salary">400000</output>
+    </div>
     </body>
 </html>
