@@ -100,4 +100,23 @@ label{
     resize: vertical;
 } 
 
- 
+ /* USE CASE 3 */
+
+ .profile-radio-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+}
+ .profile-radio-content > label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 5px;
+} 
