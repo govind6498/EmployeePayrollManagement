@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<thml>
+    <body>
+        <meta charset=" utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+        <title>Employee Payroll form</title>  
+        <link rel = "stylesheet" href="../css/new_home.css">    
+        <script defer src = "../js/new_payroll_form.js"></script>
+    </head>
+    <body>
+        <!-- //USE CASE 1 -->
+        <header class="header-content header">
+            <div class ="logo-content">
+                <img src="../assets/images.png" alt="">
+                <div>
+                    <span class="emp-text">EMPLOYEE</span><br>
+                    <span class="emp-text emp-payroll">PAYROLL</span>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class = "header-content">
+                <div class="emp-details-text">
+                    Employee Details
+                    <div class ="emp-count">10</div>
+                </div>
+                <a href="..pages/new_payroll_form_js.html" class="add-button">
+                <img src="../assets/icons/add-24px.png" alt="">+Add User</a>
+            </div><!-- Header content area -->
+            <!-- USE CASE 3 -->
+            <div class="table-main">
+                <table id="table-display" class ="table" name="table-display">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Start Date</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <img class="profile" alt="" src="../assets/profile1.webp">
+                        </td>
+                        <td>Govind Kumar</td>
+                        <td>Male</td>
+                        <td>
+                            <div class="department-label">HR</div>
+                            <div class="department-label">Finance</div>
+                        </td>
+                        <td>3000000</td>
+                        <td>1 Nov 2021</td>
+                        <td>
+                            <img id = "1" onclick = "remove(this)" alt="delete" src="../assets/delete.png">
+                            <img id = "1" alt = "edit" onclick="update(this)" src="../assets/edit.png">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+        <!-- main-content area -->
+        <script defer src = "../js/new_home.js"></script>
+        <script src="../js/utility.js"></script>
+        <script src="../js/site_properties.js"></script>
+        <script src="../js/EmployeePayroll.js"></script>
+    </body>
+</thml>
