@@ -137,13 +137,13 @@ td img:first-child{
 td img{
     cursor:pointer;
 }
-.dept-label{
-    background-color: #e9fea5;
-    border-radius: 40%;
+.deptartment{
+    background-color:green;
+    border-radius: 30%;
     width:fit-content;
     padding:1px 7px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     margin-bottom: 8px;
 }
