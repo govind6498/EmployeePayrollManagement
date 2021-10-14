@@ -23,8 +23,9 @@ window.addEventListener("DOMContentLoaded",(event)=>{
 });
 
 const save=()=>{
+    let employeePayrollData;
     try{
-        let employeePayrollData = createEmployeePayroll();
+        employeePayrollData= createEmployeePayroll();
         createAndUpdateStorage(employeePayrollData);
     }
     catch(e){
@@ -44,7 +45,7 @@ const createEmployeePayroll=()=>{
     
     employeePayrollData.gender = getSelectedValues("[name=gender]").pop();
     employeePayrollData.profilePic = getSelectedValues("[name=profile]").pop();
-    employeePayrollData.department = getSelectedValues("[name=department]");
+    employeePayrollData.department = getSelectedValues('[id=department]');
     employeePayrollData.salary = getInputValueById("#salary");
     employeePayrollData.notes = getInputValueById("#notes");
     let date = getInputValueById("#day")+" "+getInputValueById("#month")+" "+
@@ -52,17 +53,17 @@ const createEmployeePayroll=()=>{
     employeePayrollData.startDate = new Date(Date.parse(date));
     alert(employeePayrollData.toString());
     localStorage.setItem("employeePayrollData",employeePayrollData);
-    console.log("Save:"+employeePayrollData);
     return employeePayrollData;
 }
-const getSelectedValues = (propertyValue)=>{
+const getSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
-    let selItems = [];
-    allItems.forEach((item)=>{
-        if(item.checked) selItems.push(item.value);
+    let selectedItems = new Array();
+    allItems.forEach(item => {
+        if (item.checked)
+            selectedItems.push(item.value);
     });
-    return selItems;
-};
+    return selectedItems;
+} 
 const getInputValueById = (id)=>{
     let value = document.querySelector(id).value
     return value;

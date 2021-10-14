@@ -6,7 +6,6 @@
         <!-- <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">  -->
         <title>Employee Payroll form</title>  
         <link rel = "stylesheet" href="../css/new_payroll_form.css">    
-        <!-- <script defer src = "../js/new_payroll_form.js"></script> -->
     </head>
     <body>
         <!-- //USE CASE 1 -->
@@ -31,7 +30,6 @@
             </div>
             <!-- USE CASE 3 -->
 <div class="row content">
-    <!-- <label class="label text" for="profile">Profile image</label> -->
     <div class="profile-radio-content">
         <label class="label text" for="profile">Profile image</label>
         <label>
@@ -51,6 +49,7 @@
             <img class="profile" id="image4" src="../assets/profile4.webp">
         </label>
     </div>
+    <!-- USE CASE 4 -->
     <div class="row-content">
         <label class="label text" for="gender">Gender</label>
         <div>
@@ -61,25 +60,24 @@
         </div>
     </div>
     <div class="row-content">
-        <label class="label text" for="department">Daprtment</label>
+        <label class="label text" for="department">Department</label>
         <div>
-            <input class="checkbox"type="checkbox"id="hr"name="department" value="HR">
+            <input class="checkbox" type="checkbox" id="department" name="hr" value="HR">
             <label class="text" for="hr">HR</label>
-            <input class="checkbox"type="checkbox"id="sales"name="department" value="Sales">
-            <label class="text" for="sales">Sales</label>
-            <input class="checkbox"type="checkbox"id="finance"name="department" value="Finance">
-            <label class="text" for="finance">Finance</label>
-            <input class="checkbox"type="checkbox"id="engineer"name="department" value="Engineer">
-            <label class="text" for="engineer">Engineer</label>
-            <input class="checkbox"type="checkbox"id="others"name="department" value="Others">
-            <label class="text" for="others">others</label>
+            <input class="checkbox" type="checkbox" id="department" name="sales" value="Sales">
+            <label class="text" type="sales">Sales</label>
+            <input class="checkbox" type="checkbox" id="department" name="finance" value="Finance">
+            <label class="text" for="hr">Finance</label>
+            <input class="checkbox" type="checkbox" id="department" name="engineer" value="Engineer">
+            <label class="text" type="sales">Engineer</label>
+            <input class="checkbox" type="checkbox" id="department" name="others" value="Others">
+            <label class="text" type="sales">Others</label>
         </div>
     </div>
     <div class="row-content">
         <label class="label text" for="salary">Choose your salary</label>
         <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="350000">
         <output class="salary-output" for="salary">400000</output>
-        <!-- <error-output class="text-error" for="text"></error-output> -->
     </div>
     <!-- USE CASE 5 -->
     <div class ="row-content">
