@@ -12,26 +12,27 @@ const createInnerHtml = () => {
         <th>Start Date</th>
         <th>Actions</th>
       `;
-      let empPayrollData = createEmployeePayrollJSON()[0];
-    const innerHtml = `${headerHtml}
-      <tr>
-          <td>
-          <img class="profile" alt="" src="${empPayrollData._profilePic}">
-          </td>
-          <td>${empPayrollData._name}</td>
-          <td>${empPayrollData._gender}</td>
-          <td>${getDeptHtml(empPayrollData._department)}</td>
-          <td>${empPayrollData._salary}</td>
-          <td>${empPayrollData._startDate}</td>
-          <td>
-            <img name="${empPayrollData._id}" onclick="remove(this)" alt="delete" 
-                    src="../assets/delete.png">
-            <img name="${empPayrollData._id}" alt="edit" onclick="update(this)"
-                    src="../assets/edit.png">
-          </td>
+      let innerHtml= `${headerHtml}`;
+      let empPayrollList = createEmployeePayrollJSON();
+      for(const empPayrollData of empPayrollList){
+          innerHtml = `${innerHtml}
+          <tr>
+            <td><img class="profile" alt="" src="${empPayrollData._profilePic}"></td>
+            <td>${empPayrollData._name}</td>
+            <td>${empPayrollData._gender}</td>
+            <td>${getDeptHtml(empPayrollData._department)}</td>
+            <td>${empPayrollData._salary}</td>
+            <td>${empPayrollData._startDate}</td>
+            <td>
+                <img name="${empPayrollData._id}" onclick="remove(this)" alt="delete" 
+                        src="../assets/delete.png">
+                <img name="${empPayrollData._id}" alt="edit" onclick="update(this)"
+                        src="../assets/edit.png">
+            </td>
       </tr>
       `;
-    document.querySelector('#table-display').innerHTML = innerHtml;
+      }
+      document.querySelector("#table-display").innerHTML = innerHtml;
 } 
 
 const getDeptHtml =(deptList)=>{
@@ -67,6 +68,19 @@ const createEmployeePayrollJSON=()=>{
             _note:"",
             _id:new Date().getTime()+1,
             _profilePic:"../assets/profile4.webp"
+        },
+        {
+            _name:'Anoo Sing',
+            _gender:"Female",
+            _department:[
+                "HR",
+                "finance"
+            ],
+            _salary:"426000",
+            _startDate:"10 December 2021",
+            _note:"",
+            _id:new Date().getTime()+1,
+            _profilePic:"../assets/profile2.webp"
         }
     ];
     return empPayrollListLocal;
