@@ -12,26 +12,57 @@ const createInnerHtml = () => {
         <th>Start Date</th>
         <th>Actions</th>
       `;
+      let empPayrollData = createEmployeePayrollJSON()[0];
     const innerHtml = `${headerHtml}
       <tr>
           <td>
-          <img class="profile" alt="" src="../assets/profile1.webp">
+          <img class="profile" alt="" src="${empPayrollData._profilePic}">
           </td>
-          <td>Govind Kumar</td>
-          <td>Male</td>
-          <td><div class="dept-label">Finance</div>
-              <div class="dept-label">Engineer</div>
-              <div class="dept-label">Sales</div>
-              <div class="dept-label">others</div></td>
-          <td>495969</td>
-          <td>1 August 2021</td>
+          <td>${empPayrollData._name}</td>
+          <td>${empPayrollData._gender}</td>
           <td>
-          <img id="1" onclick="remove(this)" alt="delete" 
-                  src="../assets/delete.png">
-          <img id="1" alt="edit" onclick="update(this)"
-                  src="../assets/edit.png">
+            <div class="deptartment">${empPayrollData._department[0]}</div>
+            <div class="deptartment">${empPayrollData._department[1]}</div>
+           </td>
+          <td>${empPayrollData._salary}</td>
+          <td>${empPayrollData._startDate}</td>
+          <td>
+            <img name="${empPayrollData._id}" onclick="remove(this)" alt="delete" 
+                    src="../assets/delete.png">
+            <img name="${empPayrollData._id}" alt="edit" onclick="update(this)"
+                    src="../assets/edit.png">
           </td>
       </tr>
       `;
     document.querySelector('#table-display').innerHTML = innerHtml;
 } 
+const createEmployeePayrollJSON=()=>{
+    let empPayrollListLocal=[
+        {
+            _name:'Narayan Mahadevan',
+            _gender:"male",
+            _department:[
+                "Engineering",
+                "Finance"
+            ],
+            _salary:"520000",
+            _startDate:"15 Oct 2021",
+            _note:"",
+            _id:new Date().getTime(),
+            _profilePic:"../assets/profile1.webp"
+        },
+        {
+            _name:'Govind Singh',
+            _gender:"male",
+            _department:[
+                "Manager"
+            ],
+            _salary:"500000",
+            _startDate:"12 Nov 2021",
+            _note:"",
+            _id:new Date().getTime()+1,
+            _profilePic:"../assets/profile4.webp"
+        }
+    ];
+    return empPayrollListLocal;
+}
