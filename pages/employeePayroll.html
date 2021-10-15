@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset=" utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <!-- <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">  -->
+        <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet"> 
         <title>Employee Payroll form</title>  
         <link rel = "stylesheet" href="../css/new_payroll_form.css">    
+        <!-- <script defer src = "../js/new_payroll_form.js"></script> -->
     </head>
     <body>
         <!-- //USE CASE 1 -->
@@ -33,23 +35,22 @@
     <div class="profile-radio-content">
         <label class="label text" for="profile">Profile image</label>
         <label>
-            <input type="radio" id="profile1"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <input type="radio" id="profile1"name="profile" value="..//assets/profile1.webp" required>
             <img class="profile" id="image1" src="../assets/profile1.webp">
         </label>
         <label>
-            <input type="radio" id="profile2"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <input type="radio" id="profile2"name="profile" value="..//assets/profile2.webp" required>
             <img class="profile" id="image2" src="../assets/profile2.webp">
         </label>
         <label>
-            <input type="radio" id="profile3"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <input type="radio" id="profile3"name="profile" value="../assets/profile3.webp" required>
             <img class="profile" id="image3" src="../assets/profile3.webp">
         </label>
         <label>
-            <input type="radio" id="profile4"name="profile" value="..//assets/profile-images/Ellsipse3.png" required>
+            <input type="radio" id="profile4"name="profile" value="../assets/profile4.webp" required>
             <img class="profile" id="image4" src="../assets/profile4.webp">
         </label>
     </div>
-    <!-- USE CASE 4 -->
     <div class="row-content">
         <label class="label text" for="gender">Gender</label>
         <div>
@@ -60,18 +61,18 @@
         </div>
     </div>
     <div class="row-content">
-        <label class="label text" for="department">Department</label>
+        <label class="label text" for="department">Daprtment</label>
         <div>
-            <input class="checkbox" type="checkbox" id="department" name="hr" value="HR">
+            <input class="checkbox"type="checkbox"id="hr"name="department" value="HR">
             <label class="text" for="hr">HR</label>
-            <input class="checkbox" type="checkbox" id="department" name="sales" value="Sales">
-            <label class="text" type="sales">Sales</label>
-            <input class="checkbox" type="checkbox" id="department" name="finance" value="Finance">
-            <label class="text" for="hr">Finance</label>
-            <input class="checkbox" type="checkbox" id="department" name="engineer" value="Engineer">
-            <label class="text" type="sales">Engineer</label>
-            <input class="checkbox" type="checkbox" id="department" name="others" value="Others">
-            <label class="text" type="sales">Others</label>
+            <input class="checkbox"type="checkbox"id="sales"name="department" value="Sales">
+            <label class="text" for="sales">Sales</label>
+            <input class="checkbox"type="checkbox"id="finance"name="department" value="Finance">
+            <label class="text" for="finance">Finance</label>
+            <input class="checkbox"type="checkbox"id="engineer"name="department" value="Engineer">
+            <label class="text" for="engineer">Engineer</label>
+            <input class="checkbox"type="checkbox"id="others"name="department" value="Others">
+            <label class="text" for="others">others</label>
         </div>
     </div>
     <div class="row-content">
@@ -153,7 +154,7 @@
         <textarea id="notes" class="input" name="Notes" placeholder="" style="height:50px;"></textarea>
     </div>
     <div class="buttonParent">
-        <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+        <a href="../pages/new_home.html" class="resetButton button cancelButton">Cancel</a>
         <div class="submit-reset">
             <button type="submit" class="button submitButton" id="submitButton">Submit</button>
             <button type="reset" class="resetButton button">Reset</button>

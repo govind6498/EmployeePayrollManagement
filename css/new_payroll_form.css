@@ -81,7 +81,7 @@ img{
 }
 
 label{
-    padding: 12px 12px 12px 0px ;
+    padding: 12px 12px 15px 0px ;
     display: inline-block;
     
 }
@@ -167,9 +167,6 @@ select{
 .cancelButton{
     text-decoration: none;
     text-align: center;
-}
-#salary{
-    width: 100%;
 }
 @media only screen and (max-width:360px){
     .cancelButton{

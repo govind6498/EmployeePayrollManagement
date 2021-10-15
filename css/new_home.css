@@ -4,7 +4,7 @@ body{
     height: 100%;
 }
 .header{
-    padding: 15px;
+    padding: 15px 0;
     background-color: #ffffff;
 }
 .header-content{
@@ -38,10 +38,12 @@ img{
 }
 .emp-payroll{ color:#42515f}
 *{
-    height: auto;
+    /* height: auto; */
     box-sizing: border-box;
 }
 /* USE CASE 2 */
+
+
 .add-button{
     font:norma normal normal 22px/29px Roboto;
     letter-spacing: 0px;
@@ -60,9 +62,10 @@ img{
     flex-direction: column;
     min-height: calc(100vh-80px);
     background-color: #f7f7f7;
-    padding: 30px 0 10px;
+    padding: 10px 0 300px;
     box-sizing: border-box;
 }
+
 .header-content{
     display: flex;
     flex-direction: row;
@@ -88,6 +91,7 @@ img{
     display: inline-block;
 }
 /* USE CASE 3 */
+
 
 .table-main{
     width: 80%;
