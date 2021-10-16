@@ -83,7 +83,7 @@
     <!-- USE CASE 5 -->
     <div class ="row-content">
         <label class="label text" for="startDate">Start Sate</label>
-        <div>
+        <div id="date">
             <select id="day" name="Day">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -133,6 +133,10 @@
 
             </select>
             <select id="year" name="Year">
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
                 <option value="2021">2021</option>
                 <option value="2020">2020</option>
                 <option value="2019">2019</option>
@@ -147,6 +151,7 @@
                 <option value="2015">2010</option>
             </select>
         </div>
+        <error-output class="date-error" for="startDate"></error-output>
     </div>
     <!-- USE CASE 6 -->
     <div class="row-content">
