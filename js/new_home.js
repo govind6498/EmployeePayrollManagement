@@ -24,8 +24,8 @@ const createInnerHtml = () => {
             <td>₹ ${empPayrollData._salary}</td>
             <td>${dateString}</td>
             <td>
-                <img name="${empPayrollData._id}" onclick="remove(this)" alt="delete" src="../assets/delete.png">
-                <img name="${empPayrollData._id}" alt="edit" onclick="update(this)" src="../assets/edit.png">
+                <img id="${empPayrollData.id}" onclick="remove(this)" alt="delete" src="../assets/delete.png">
+                <img id="${empPayrollData.id}" alt="edit" onclick="update(this)" src="../assets/edit.png">
             </td>
         </tr>
       `;
@@ -41,11 +41,11 @@ const getDeptHtml = (deptList) => {
     return deptHtml;
 }
 const remove = (node) => {
-    let empPayrollData = empPayrollList.find(empData => empData._id == node._id);
+    let empPayrollData = empPayrollList.find(empData => empData.id == node.id);
     if (!empPayrollData) return;
     const index = empPayrollList
-        .map(empData => empData._id)
-        .indexOf(empPayrollData._id);
+        .map(empData => empData.id)
+        .indexOf(empPayrollData.id);
     empPayrollList.splice(index, 1);
     localStorage.setItem("EmployeePayrollList", JSON.stringify(empPayrollList));
     document.querySelector(".emp-count").textContent = empPayrollList.length;
@@ -63,7 +63,7 @@ const createEmployeePayrollJSON = () => {
             _salary: "520000",
             _startDate: "15 Oct 2021",
             _note: "Hello Narayan",
-            _id: new Date().getTime(),
+            id: new Date().getTime(),
             _profilePic: "../assets/profile3.webp"
         },
         {
@@ -75,7 +75,7 @@ const createEmployeePayrollJSON = () => {
             _salary: "500000",
             _startDate: "12 Nov 2021",
             _note: "",
-            _id: new Date().getTime() + 1,
+            id: new Date().getTime() + 1,
             _profilePic: "../assets/profile2.webp"
         },
         {
@@ -88,7 +88,7 @@ const createEmployeePayrollJSON = () => {
             _salary: "426000",
             _startDate: "10 December 2021",
             _note: "",
-            _id: new Date().getTime() + 1,
+            id: new Date().getTime() + 1,
             _profilePic: "../assets/profile1.webp"
         }
     ];
