@@ -1,175 +1,178 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=" utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-        <title>Employee Payroll form</title>  
-        <link rel = "stylesheet" href="../css/new_payroll_form.css">    
-        <script defer src = "../js/new_payroll_form.js"></script>
-    </head>
-    <body>
-        <!-- //USE CASE 1 -->
-        <header class="header-content header">
-            <div class ="logo-content">
-                <img src="../assets/images.png" alt="">
-                <div>
-                    <span class="emp-text">EMPLOYEE</span><br>
-                    <span class="emp-text emp-payroll">PAYROLL</span>
-                </div>
+
+<head>
+    <meta charset=" utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Employee Payroll form</title>
+    <link rel="stylesheet" href="../css/new_payroll_form.css">
+    <script defer src="../js/new_payroll_form.js"></script>
+</head>
+
+<body>
+    <!-- //USE CASE 1 -->
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images.png" alt="">
+            <div>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
-        </header>
-        <!-- USE CASE 2 -->
-        <div id="formId" class="form-content">
-        
-            <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
+        </div>
+    </header>
+    <!-- USE CASE 2 -->
+    <div id="formId" class="form-content">
+
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name:"required>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name:" required>
                 <error-output class="text-error" for="text"></error-output>
             </div>
             <!-- USE CASE 3 -->
-<div class="row content">
-    <div class="profile-radio-content">
-        <label class="label text" for="profile">Profile image</label>
-        <label>
-            <input type="radio" id="profile1"name="profile" value="..//assets/profile1.webp" required>
-            <img class="profile" id="image1" src="../assets/profile1.webp">
-        </label>
-        <label>
-            <input type="radio" id="profile2"name="profile" value="..//assets/profile2.webp" required>
-            <img class="profile" id="image2" src="../assets/profile2.webp">
-        </label>
-        <label>
-            <input type="radio" id="profile3"name="profile" value="../assets/profile3.webp" required>
-            <img class="profile" id="image3" src="../assets/profile3.webp">
-        </label>
-        <label>
-            <input type="radio" id="profile4"name="profile" value="../assets/profile4.webp" required>
-            <img class="profile" id="image4" src="../assets/profile4.webp">
-        </label>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="gender">Gender</label>
-        <div>
-            <input type="radio" id="male" name="gender" value="male">
-            <label class="text" for="male">Male</label>
-            <input type="radio" id="female" name="gender"value="female">
-            <label class="text"for="female">Female</label>
-        </div>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="department">Daprtment</label>
-        <div>
-            <input class="checkbox"type="checkbox"id="hr"name="department" value="HR">
-            <label class="text" for="hr">HR</label>
-            <input class="checkbox"type="checkbox"id="sales"name="department" value="Sales">
-            <label class="text" for="sales">Sales</label>
-            <input class="checkbox"type="checkbox"id="finance"name="department" value="Finance">
-            <label class="text" for="finance">Finance</label>
-            <input class="checkbox"type="checkbox"id="engineer"name="department" value="Engineer">
-            <label class="text" for="engineer">Engineer</label>
-            <input class="checkbox"type="checkbox"id="others"name="department" value="Others">
-            <label class="text" for="others">others</label>
-        </div>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="salary">Choose your salary</label>
-        <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="350000">
-        <output class="salary-output" for="salary">400000</output>
-    </div>
-    <!-- USE CASE 5 -->
-    <div class ="row-content">
-        <label class="label text" for="startDate">Start Sate</label>
-        <div id="date">
-            <select id="day" name="Day">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-            </select>
-            <select id="month"name="Month">
-                <option value="jan">January</option>
-                <option value="feb">Febuary</option>
-                <option value="march">March</option>
-                <option value="april">April</option>
-                <option value="may">May</option>
-                <option value="jun">Jun</option>
-                <option value="july">July</option>
-                <option value="august">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="november">November</option>
-                <option value="december">December</option>
+            <div class="row content">
+                <div class="profile-radio-content">
+                    <label class="label text" for="profile">Profile image</label>
+                    <label>
+                        <input type="radio" id="profile1" name="profile" value="..//assets/profile1.webp" required>
+                        <img class="profile" id="image1" src="../assets/profile1.webp">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile2" name="profile" value="..//assets/profile2.webp" required>
+                        <img class="profile" id="image2" src="../assets/profile2.webp">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile3" name="profile" value="../assets/profile3.webp" required>
+                        <img class="profile" id="image3" src="../assets/profile3.webp">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile4" name="profile" value="../assets/profile4.webp" required>
+                        <img class="profile" id="image4" src="../assets/profile4.webp">
+                    </label>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="gender">Gender</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label class="text" for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label class="text" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="department">Daprtment</label>
+                    <div>
+                        <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+                        <label class="text" for="hr">HR</label>
+                        <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+                        <label class="text" for="sales">Sales</label>
+                        <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+                        <label class="text" for="finance">Finance</label>
+                        <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+                        <label class="text" for="engineer">Engineer</label>
+                        <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+                        <label class="text" for="others">others</label>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="salary">Choose your salary</label>
+                    <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="350000">
+                    <output class="salary-output" for="salary">400000</output>
+                </div>
+                <!-- USE CASE 5 -->
+                <div class="row-content">
+                    <label class="label text" for="startDate">Start Sate</label>
+                    <div id="date">
+                        <select id="day" name="Day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select id="month" name="Month">
+                            <option value="jan">January</option>
+                            <option value="feb">Febuary</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="jun">Jun</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="sep">September</option>
+                            <option value="oct">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
 
-            </select>
-            <select id="year" name="Year">
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2019">2014</option>
-                <option value="2018">2013</option>
-                <option value="2017">2012</option>
-                <option value="2016">2011</option>
-                <option value="2015">2010</option>
-            </select>
-        </div>
-        <error-output class="date-error" for="startDate"></error-output>
+                        </select>
+                        <select id="year" name="Year">
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2019">2014</option>
+                            <option value="2018">2013</option>
+                            <option value="2017">2012</option>
+                            <option value="2016">2011</option>
+                            <option value="2015">2010</option>
+                        </select>
+                    </div>
+                    <error-output class="date-error" for="startDate"></error-output>
+                </div>
+                <!-- USE CASE 6 -->
+                <div class="row-content">
+                    <label class="label text" for=notes>Notes</label>
+                    <textarea id="notes" class="input" name="Notes" placeholder="" style="height:50px;"></textarea>
+                </div>
+                <div class="buttonParent">
+                    <a href="../pages/new_home.html" class="resetButton button cancelButton">Cancel</a>
+                    <div class="submit-reset">
+                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                        <button type="reset" class="resetButton button">Reset</button>
+                    </div>
+                </div>
+        </form>
     </div>
-    <!-- USE CASE 6 -->
-    <div class="row-content">
-        <label class="label text" for=notes>Notes</label>
-        <textarea id="notes" class="input" name="Notes" placeholder="" style="height:50px;"></textarea>
-    </div>
-    <div class="buttonParent">
-        <a href="../pages/new_home.html" class="resetButton button cancelButton">Cancel</a>
-        <div class="submit-reset">
-            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-            <button type="reset" class="resetButton button">Reset</button>
-        </div>
-    </div>
-</form>
-         </div>
-        <!-- </div> -->
-         <script defer src = "../js/EmployeePayroll.js"></script>
-         <script defer src = "../js/new_payroll_form.js"></script>
-        
-    </body>
+    <script defer src="../js/EmployeePayroll.js"></script>
+    <script defer src="../js/new_payroll_form.js"></script>
+    <script defer src="../js/site_properties.js"></script>
+    <script defer src="../js/utility.js"></script>
+
+</body>
+
 </html>
